@@ -101,3 +101,15 @@ Wir verwenden die Rechenregeln, um diejnigen Datensätze zu selektieren, die bez
 * Erstellen Sie ein kombiniertes Diagramm, mit zwei Unterdiagrammen, welche untereinander stehen. Alle Diagramme beziehen sich auf die Datenmenge aus Aufgabe 5. Die Punkte für diese Aufgabe erhalte SIe, wenn 7. und  8. als Unterdiagramme gemacht werden.
 * Das erste Unterdiagramm soll den Temperaturverlauf von Messbeginn bis Messende für die daten median_tmin und median_tmax darstellen.  Das Diagramm soll einen Titel, Achsenbeschriftungen sowie eine Legende haben.
 * Das zweite Unterdiagramm soll die Sonnenscheindauer (mdian_sun) und die mittlere Regenmenge (median_rain) über die gesamte Messperiode darstellen. Achtung: die Sonnenscheindauer und die Regenmenge haben unterschiedliche Einheiten und dürfen nicht auf derselben y-Achse dargestellt werden! Das Diagramm soll einen Titel, Achsenbeschriftungen sowie eine Legende haben.
+
+## Contributing
+
+This is a personal learning project for me. Please feel free to fork this repo. Pull request to submit more programs.
+
+## Feedback
+
+If you find any bug or have any suggestion, please do file issues. I am graceful for any feedback and will do my best to improve this package.
+
+## License
+
+[MIT](LICENSE) © 2020 Ioannis Christodoulakis
