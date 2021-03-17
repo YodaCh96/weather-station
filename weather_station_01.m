@@ -42,64 +42,39 @@ sortedD = sortrows(wDfixed, {'year', 'month'});
 % The maximal temperature over the years is displayed here.
 plot( sortedD.year, sortedD.tmax);
 
-% Aufgabe 5:
-% Welche Wetterstation liefert die meisten Daten? Erstellen Sie eine neue Tabelle, 
-% welche ausschliesslich die Daten dieser Wetterstation beinhaltet.
-
-% mit summary können wir das einfach ablesen
+% Exercise 1.5
 groupSum = groupsummary(wDfixed, 'station');
 [~, index] = max(groupSum.GroupCount);
 maxStation = groupSum.station(index);
 maxStationD = wDfixed(wDfixed.station==maxStation,:);
 
-% Aufgabe 6:
-% Erstellen Sie eine neue Tabelle, welche die durchschnittlichen Temperaturen 
-% pro Jahr enthält. Verwenden Sie die Funktion _*groupsummary(..)*_ und stellen 
-% Sie die durchschnittlichen Maximal-Temperaturen seit Messbeginn in einem Plot 
-% dar. Verwenden Sie die Funktion _*'mean'*_ für die Berechnung.
-
+% Exercise 1.6
 meanTemp = groupsummary( wDfixed, 'year', 'mean', {'tmax', 'tmin'}); 
 plot(meanTemp.year, meanTemp.mean_tmax, "-*");
 hold on;
 plot(meanTemp.year, meanTemp.mean_tmin, "-^" );
 
-% Aufgabe 7:
-% Führen Sie dieselbe Auswertung nochmals durch. Verwenden Sie diesmal aber 
-% die Funktion 'median' und zeichnen Sie den Verlauf in derselben Grafik auf. 
-% Wählen Sie einen geeigneten Markierer, um die zwei Datenreihen zu unterscheiden.
-% 
-% Vergleichen Sie die Daten und kommentieren Sie, Entspricht die Grafik ihren 
-% Erwartungen?
-
+% Exercise 1.7
 % wDfixed.AvgTemp = (wDfixed.tmax + wDfixed.tmin)/2;
 medianTemp = groupsummary( wDfixed, 'year', 'median', {'tmax', 'tmin'}); 
 plot(medianTemp.year, medianTemp.median_tmax, "-+");    
 plot(medianTemp.year, medianTemp.median_tmin, "-<" );
 hold off;
 
-% Aufgabe 8:
-% Welches ist die Messstation mit der grössten mittleren Regenmenge pro Jahr, 
-% und welches ist die Messstation mit der kleinsten mittleren Regenmenge pro Jahr.
-
+% Exercise 1.8
 meanRainPerStation = groupsummary(wDfixed, {'station', 'year'}, 'mean', 'rain');
 [~, idxMin] = min( meanRainPerStation.mean_rain );
 [~, idxMax] = max( meanRainPerStation.mean_rain );
 minRainS = wDfixed.station(idxMin);
 maxRainS = wDfixed.station(idxMax);
 
-% Aufgabe 9:
-% Zeichnen Sie eine Scatterplot, welcher die Regenmenge und die max Temperatur 
-% einer Messstation gegenüberstellt. Beschriften Sie das Diagramm mit Titel, X-Achse 
-% und Y-Achse.
-
+% Exercise 1.9
 scatter(maxStationD.tmax, maxStationD.rain, 'filled');
 title('Scatterplot temperature vs amount of water')
 ylabel('amount of water')
 xlabel('temperature')
 
-% Aufgabe 10:
-% Vergleichen Sie die Maximal-Temperaturen zwei Messstationen in einem Boxplot.
-
+% Exercise 1.10
 minD = wDfixed(wDfixed.station == minRainS,:);
 maxD = wDfixed(wDfixed.station == maxRainS,:);
 ismember(minD, wDfixed);
