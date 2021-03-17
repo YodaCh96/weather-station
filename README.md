@@ -1,70 +1,67 @@
-# Wetterstation
+# Weather Station
 
-## Ziele
+## Goals
 
-* CSV Dateien importieren
-* Datentyp Table
-* Grundoperationen des Datentyps Table
-* mehrere Datenreihen in einem Plot aufzeichnen
-* kennen die Basisrechenregeln der Mengenlehre
-* können mit diesen Rechenregeln Terme umformen und unter Umständen vereinfachen
-* können diese Regeln auf den Matlab Datentyp Table anwenden
+* Import CSV files
+* Table data type
+* Basic operations of the Table data type
+* Plot several data series in one plot
+* Know the basic arithmetic rules of set theory
+* Can transform terms with these calculation rules and simplify them under certain situations
+* Can apply these rules to the Matlab data type Table
 
-## Aufgabenstellung
+## Exercise 1
 
-### Aufgabe 1
+### Exercise 1.1
 
-#### Aufgabe 1.1
+Import the data set **MET Office Weather Data.csv** into Matlab. Do the following:
 
-Importieren Sie den Datensatz **MET Office Weather Data.csv** in Matlab. Gehen Sie wie folgt vor:
+* Save the file locally on your computer
+* Open the file
+* Create a script for reading the data set and save this script
+* To do this you must use the **`Import Data`** button
+* Study the script and change the name of the Matlab variable created by the import to **`weatherD`**.
+* Which Matlab function is used to read in the data?
 
-* Speichern Sie die Datei lokal auf ihrem Rechner
-* Öffnen Sie die Datei über diesen Button
-* Erzeugen Sie ein Skript für das Lesen des Datensatzes und speichern Sie dieses Skript ab
-* Dazu müssen Sie den Button **`Import Data`** verwenden
-* Studieren Sie das Skript und ändern Sie den Namen der Matlab-Variablen, welche durch den Import erzeugt wird in **`weatherD`**
-* Welche Matlab Funktion wird verwendet, um die Daten einzulesen?
+### Exercise 1.2
 
-#### Aufgabe 1.2
+Execute the created script. This creates the variable **`weatherD`** with the type Table. Run the **`summary`** command. What information from Summary is not helpful?
 
-Führen Sie das erstellt Skript aus. Dadurch wird die Variable **`weatherD`** mit dem Typ Table erzeugt. Führen Sie den Befehl **`summary`** aus. Welche Informationen von Summary sind nicht hilfreich?
+### Exercise 1.3
 
-#### Aufgabe 1.3
+Add to your script so that a new variable **`wDfixed`** is created that contains only valid values. How many rows were removed from the table?
 
-Ergänzen Sie ihr Skript so, dass eine neue Variable **`wDfixed`** erzeugt wird, die nur noch gültigen Werte enthält. Wie viele Zeilen wurden aus der Tabelle entfernt?
+### Exercise 1.4
 
-#### Aufgabe 1.4
+Extend your script so that your table is sorted by year and month and create a plot that shows the maximum temperature over the years. Why is the result not useful?
 
-Erweitern Sie ihr Skript so, dass ihre Tabelle nach Jahr und Monat sortiert wird und erstellen Sie einen plot, welcher die Maximal-Temperatur über die Jahre anzeigt. Weshalb ist das Ergebnis nicht sinnvoll?
+### Exercise 1.5
 
-#### Aufgabe 1.5
+Which weather station provides the most data? Create a new table that contains only the data from this weather station.
 
-Welche Wetterstation liefert die meisten Daten? Erstellen Sie eine neue Tabelle, welche ausschliesslich die Daten dieser Wetterstation beinhaltet.
+### Exercise 1.6
 
-#### Aufgabe 1.6
+Create a new table containing the average temperatures per year. Use the **`groupsummary(..)`** function and plot the average maximum temperatures since the beginning of the measurement. Use the **`mean`** function for the calculation.
 
-Erstellen Sie eine neue Tabelle, welche die durchschnittlichen Temperaturen pro Jahr enthält. Verwenden die Funktion **`groupsummary(..)`** und stellen Sie die durchschnittlichen Maximal-Temperaturen seit Messbeginn in einem Plot dar. Verwenden Sie die Funktion **`mean`** für die Berechnung.
+### Exercise 1.7
 
-#### Aufgabe 1.7
+Run the same analysis again. This time, however, use the **`median`** function and plot the progression on the same graph. Choose an appropriate marker to distinguish the two data series. Compare the data and comment. Does the graph meet your expectations?
 
-Führen Sie dieselbe Auswertung nochmals durch. Verwenden Sie diesmal aber die Funktion **`median`** und zeichnen Sie den Verlauf in derselben Grafik auf. Wählen Sie einen geeigneten Markierer, um die zwei Datenreihen zu unterscheiden.
-Vergleichen Sie die Daten und kommentieren Sie. Entspricht die Grafik ihren Erwartungen?
+### Exercise 1.8
 
-#### Aufgabe 1.8
+Which is the measuring station with the largest average rainfall per year, and which is the measuring station with the smallest average rainfall per year.
 
-Welches ist die Messstation mit der der grössten mittleren Regenmenge pro Jahr, und welches ist die Messtation mit der kleinsten mittleren Regenmenge pro Jahr.
+### Exercise 1.9
 
-#### Aufgabe 1.9
+Draw a scatterplot that contrasts the rainfall and temperature of a station. Label the plot with title, X-axis and Y-axis.
 
-Zeichen Sie eine Scatterplot, welcher dir Regenmenge und die Temperatur einer Messstation gegenüberstellt. Beschriften Sie das Diagramm mit Titel, X-Achse und Y-Achse
+### Exercise 1.10
 
-#### Aufgabe 1.10
+Compare maximum temperatures of these two measuring stations in a boxplot.
 
-Vergleichen Sie Maximal-Temperaturen dieser zwei Messstationen in einem Boxplot.
+## Aufgabe 2
 
-### Aufgabe 2
-
-#### Aufgabe 2.1
+### Aufgabe 2.1
 
 Umformen von Termen:
 
@@ -75,7 +72,7 @@ Umformen von Termen:
 5. A &cup; (B \ (C &cap; A))
 6. A \ ((B &cup; C) &cap; (A &cup; C))
 
-#### Aufgabe 2.2
+### Aufgabe 2.2
 
 Wir verwenden für diese Übung denselben Datentype wie in Übung 1 (**`MET_Office_Weather_Data.csv`**). Wir betrachten aber nur die Daten des Jahres 2020.
 
@@ -91,7 +88,7 @@ Wir verwenden die Rechenregeln, um diejnigen Datensätze zu selektieren, die bez
 3. Schreiben Sie die Mengenoperationen, die Sie ausgeführt haben als Formel auf.
 4. Welchem Bereich entspricht diese Menge in einem Boxplot?
 
-### Aufgabe 3
+## Aufgabe 3
 
 * Lesen Sie die Daten der Datei "MET Office Weather Data .csv" in die Matlab Variable data ein.
 * Bereiten Sie diese Variable so auf, dass Sie mit den Daten rain, sun, tmin, tmax rechnen können.
