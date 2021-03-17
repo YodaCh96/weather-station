@@ -1,18 +1,5 @@
+% Exercise 1.1
 % Import data from MET Office Weather Data
-% Aufgabe 1:
-% Importieren Sie den Datensatz _*MET Office Weather Data.csv*_ in Matlab. Gehen 
-% Sie wie folgt vor:
-% 
-% * Speichern Sie die Datei lokal auf ihrem Rechner
-% * Öffnen Sie die Datei über den Button _*Browse for folder*_
-% * Erzeugen Sie ein Skript für das Lesen des Datensatzes und speichern Sie 
-% dieses Skript ab.
-% * Dazu müssen Sie den Button _*Import Data*_ verwenden.
-% * Studieren Sie das Skript und ändern Sie den Namen der Matlab-Variablen, 
-% welche durch den Import erzeugt wird in _*weatherD*_.
-% * Welche Matlab Funktion wird verwendet, um die daten einzulesen?
-% Setup the Import Options and import the data
-
 opts = delimitedTextImportOptions("NumVariables", 8);
 
 % Specify range and delimiter
@@ -36,35 +23,23 @@ weatherD = readtable("C:\Users\Ioannis\Desktop\Github_Repos\MATLAB\Wetterstation
 % Clear temporary variables
 clear opts
 
-% Aufgabe 2:
-% Führen Sie das erstellt Skript aus. Dadurch wird die Variable weatherD mit 
-% dem Typ Table erzeugt. Führen Sie den Befehl summary aus. Welche Informationen 
-% von Summary sind nicht hilfreich?
-
+% Exercise 1.2
 % Print summary of table
 summary(weatherD);
 
-% Aufgabe 3:
-% Ergänzen Sie ihr Skript so, dass eine neue Variable wDfixed erzeugt wird, 
-% die nur noch gültigen Werte enthält. Wie viele Zeilen wurden aus der Tabelle 
-% entfernt?
-
-% Hier wird eine neue Variable erzeugt, welche nur gültige Werte enthält.
+% Exercise 1.3
+% A new variable is created here, which contains only valid values
 wDfixed = rmmissing(weatherD);
 
-% Hier wird die Anzahl der entfernten Zeilen ausgegeben.
+% The number of removed lines is printed here
 removedRows = height(weatherD) - height(wDfixed);
 
-% Aufgabe 4:
-% Erweitern Sie ihr Skript so, dass ihre Tabelle nach Jahr und Monat sortiert 
-% wird und erstellen Sie einen plot, welcher die Maximal-Temperatur über die Jahre 
-% anzeigt. Weshalb ist das Ergebnis nicht sinnvoll?
-
-% Die Tabelle wird nach Jahr und Monat sortiert.
+% Exercise 1.4
+% The table is sorted by year and month
 % sortedD = sortrows(wDfixed, [1 2]);            
 sortedD = sortrows(wDfixed, {'year', 'month'});
 
-% Hier wird die Maimxal-Temperatur über die Jahre angezeigt.
+% The maximal temperature over the years is displayed here.
 plot( sortedD.year, sortedD.tmax);
 
 % Aufgabe 5:
