@@ -36,7 +36,7 @@ weatherD = readtable("C:\Users\Ioannis\Desktop\Github_Repos\MATLAB\Wetterstation
 % Clear temporary variables
 clear opts
 
-%% *Aufgabe 2:*
+%% Aufgabe 2:
 % Führen Sie das erstellt Skript aus. Dadurch wird die Variable weatherD mit 
 % dem Typ Table erzeugt. Führen Sie den Befehl summary aus. Welche Informationen 
 % von Summary sind nicht hilfreich?
@@ -44,7 +44,7 @@ clear opts
 % Print summary of table
 summary(weatherD);
 
-%% *Aufgabe 3:*
+%% Aufgabe 3:
 % Ergänzen Sie ihr Skript so, dass eine neue Variable wDfixed erzeugt wird, 
 % die nur noch gültigen Werte enthält. Wie viele Zeilen wurden aus der Tabelle 
 % entfernt?
@@ -88,7 +88,7 @@ plot(meanTemp.year, meanTemp.mean_tmax, "-*");
 hold on;
 plot(meanTemp.year, meanTemp.mean_tmin, "-^" );
 
-%% *Aufgabe 7:*
+%% Aufgabe 7:
 % Führen Sie dieselbe Auswertung nochmals durch. Verwenden Sie diesmal aber 
 % die Funktion 'median' und zeichnen Sie den Verlauf in derselben Grafik auf. 
 % Wählen Sie einen geeigneten Markierer, um die zwei Datenreihen zu unterscheiden.
