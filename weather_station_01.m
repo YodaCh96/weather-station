@@ -1,8 +1,8 @@
-%% Import data from MET Office Weather Data
-%% Aufgabe 1:
+% Import data from MET Office Weather Data
+% Aufgabe 1:
 % Importieren Sie den Datensatz _*MET Office Weather Data.csv*_ in Matlab. Gehen 
 % Sie wie folgt vor:
-%% 
+% 
 % * Speichern Sie die Datei lokal auf ihrem Rechner
 % * Öffnen Sie die Datei über den Button _*Browse for folder*_
 % * Erzeugen Sie ein Skript für das Lesen des Datensatzes und speichern Sie 
@@ -36,7 +36,7 @@ weatherD = readtable("C:\Users\Ioannis\Desktop\Github_Repos\MATLAB\Wetterstation
 % Clear temporary variables
 clear opts
 
-%% Aufgabe 2:
+% Aufgabe 2:
 % Führen Sie das erstellt Skript aus. Dadurch wird die Variable weatherD mit 
 % dem Typ Table erzeugt. Führen Sie den Befehl summary aus. Welche Informationen 
 % von Summary sind nicht hilfreich?
@@ -44,7 +44,7 @@ clear opts
 % Print summary of table
 summary(weatherD);
 
-%% Aufgabe 3:
+% Aufgabe 3:
 % Ergänzen Sie ihr Skript so, dass eine neue Variable wDfixed erzeugt wird, 
 % die nur noch gültigen Werte enthält. Wie viele Zeilen wurden aus der Tabelle 
 % entfernt?
@@ -55,19 +55,19 @@ wDfixed = rmmissing(weatherD);
 % Hier wird die Anzahl der entfernten Zeilen ausgegeben.
 removedRows = height(weatherD) - height(wDfixed);
 
-%% Aufgabe 4:
+% Aufgabe 4:
 % Erweitern Sie ihr Skript so, dass ihre Tabelle nach Jahr und Monat sortiert 
 % wird und erstellen Sie einen plot, welcher die Maximal-Temperatur über die Jahre 
 % anzeigt. Weshalb ist das Ergebnis nicht sinnvoll?
 
 % Die Tabelle wird nach Jahr und Monat sortiert.
-%sortedD = sortrows(wDfixed, [1 2]);            
+% sortedD = sortrows(wDfixed, [1 2]);            
 sortedD = sortrows(wDfixed, {'year', 'month'});
 
 % Hier wird die Maimxal-Temperatur über die Jahre angezeigt.
 plot( sortedD.year, sortedD.tmax);
 
-%% Aufgabe 5:
+% Aufgabe 5:
 % Welche Wetterstation liefert die meisten Daten? Erstellen Sie eine neue Tabelle, 
 % welche ausschliesslich die Daten dieser Wetterstation beinhaltet.
 
@@ -77,7 +77,7 @@ groupSum = groupsummary(wDfixed, 'station');
 maxStation = groupSum.station(index);
 maxStationD = wDfixed(wDfixed.station==maxStation,:);
 
-%% Aufgabe 6:
+% Aufgabe 6:
 % Erstellen Sie eine neue Tabelle, welche die durchschnittlichen Temperaturen 
 % pro Jahr enthält. Verwenden Sie die Funktion _*groupsummary(..)*_ und stellen 
 % Sie die durchschnittlichen Maximal-Temperaturen seit Messbeginn in einem Plot 
@@ -88,7 +88,7 @@ plot(meanTemp.year, meanTemp.mean_tmax, "-*");
 hold on;
 plot(meanTemp.year, meanTemp.mean_tmin, "-^" );
 
-%% Aufgabe 7:
+% Aufgabe 7:
 % Führen Sie dieselbe Auswertung nochmals durch. Verwenden Sie diesmal aber 
 % die Funktion 'median' und zeichnen Sie den Verlauf in derselben Grafik auf. 
 % Wählen Sie einen geeigneten Markierer, um die zwei Datenreihen zu unterscheiden.
@@ -96,13 +96,13 @@ plot(meanTemp.year, meanTemp.mean_tmin, "-^" );
 % Vergleichen Sie die Daten und kommentieren Sie, Entspricht die Grafik ihren 
 % Erwartungen?
 
-%wDfixed.AvgTemp = (wDfixed.tmax + wDfixed.tmin)/2;
+% wDfixed.AvgTemp = (wDfixed.tmax + wDfixed.tmin)/2;
 medianTemp = groupsummary( wDfixed, 'year', 'median', {'tmax', 'tmin'}); 
 plot(medianTemp.year, medianTemp.median_tmax, "-+");    
 plot(medianTemp.year, medianTemp.median_tmin, "-<" );
 hold off;
 
-%% Aufgabe 8:
+% Aufgabe 8:
 % Welches ist die Messstation mit der grössten mittleren Regenmenge pro Jahr, 
 % und welches ist die Messstation mit der kleinsten mittleren Regenmenge pro Jahr.
 
@@ -112,7 +112,7 @@ meanRainPerStation = groupsummary(wDfixed, {'station', 'year'}, 'mean', 'rain');
 minRainS = wDfixed.station(idxMin);
 maxRainS = wDfixed.station(idxMax);
 
-%% Aufgabe 9:
+% Aufgabe 9:
 % Zeichnen Sie eine Scatterplot, welcher die Regenmenge und die max Temperatur 
 % einer Messstation gegenüberstellt. Beschriften Sie das Diagramm mit Titel, X-Achse 
 % und Y-Achse.
@@ -122,7 +122,7 @@ title('Scatterplot temperature vs amount of water')
 ylabel('amount of water')
 xlabel('temperature')
 
-%% Aufgabe 10:
+% Aufgabe 10:
 % Vergleichen Sie die Maximal-Temperaturen zwei Messstationen in einem Boxplot.
 
 minD = wDfixed(wDfixed.station == minRainS,:);
