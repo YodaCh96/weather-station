@@ -10,9 +10,9 @@
 * Can transform terms with these calculation rules and simplify them under certain situations
 * Can apply these rules to the Matlab data type Table
 
-## Exercise 1
+## Task
 
-### Exercise 1.1
+### Task 1.1
 
 Import the data set **MET Office Weather Data.csv** into Matlab. Do the following:
 
@@ -23,45 +23,45 @@ Import the data set **MET Office Weather Data.csv** into Matlab. Do the followin
 * Study the script and change the name of the Matlab variable created by the import to **`weatherD`**.
 * Which Matlab function is used to read in the data?
 
-### Exercise 1.2
+### Task 1.2
 
 Execute the created script. This creates the variable **`weatherD`** with the type Table. Run the **`summary`** command. What information from Summary is not helpful?
 
-### Exercise 1.3
+### Task 1.3
 
 Add to your script so that a new variable **`wDfixed`** is created that contains only valid values. How many rows were removed from the table?
 
-### Exercise 1.4
+### Task 1.4
 
 Extend your script so that your table is sorted by year and month and create a plot that shows the maximum temperature over the years. Why is the result not useful?
 
-### Exercise 1.5
+### Task 1.5
 
 Which weather station provides the most data? Create a new table that contains only the data from this weather station.
 
-### Exercise 1.6
+### Task 1.6
 
 Create a new table containing the average temperatures per year. Use the **`groupsummary(..)`** function and plot the average maximum temperatures since the beginning of the measurement. Use the **`mean`** function for the calculation.
 
-### Exercise 1.7
+### Task 1.7
 
 Run the same analysis again. This time, however, use the **`median`** function and plot the progression on the same graph. Choose an appropriate marker to distinguish the two data series. Compare the data and comment. Does the graph meet your expectations?
 
-### Exercise 1.8
+### Task 1.8
 
 Which is the measuring station with the largest average rainfall per year, and which is the measuring station with the smallest average rainfall per year.
 
-### Exercise 1.9
+### Task 1.9
 
 Draw a scatterplot that contrasts the rainfall and temperature of a station. Label the plot with title, X-axis and Y-axis.
 
-### Exercise 1.10
+### Task 1.10
 
 Compare maximum temperatures of these two measuring stations in a boxplot.
 
-## Aufgabe 2
+## Task 2
 
-### Aufgabe 2.1
+### Task 2.1
 
 Umformen von Termen:
 
@@ -72,7 +72,7 @@ Umformen von Termen:
 5. A &cup; (B \ (C &cap; A))
 6. A \ ((B &cup; C) &cap; (A &cup; C))
 
-### Aufgabe 2.2
+### Task 2.2
 
 Wir verwenden für diese Übung denselben Datentype wie in Übung 1 (**`MET_Office_Weather_Data.csv`**). Wir betrachten aber nur die Daten des Jahres 2020.
 
@@ -88,7 +88,7 @@ Wir verwenden die Rechenregeln, um diejnigen Datensätze zu selektieren, die bez
 3. Schreiben Sie die Mengenoperationen, die Sie ausgeführt haben als Formel auf.
 4. Welchem Bereich entspricht diese Menge in einem Boxplot?
 
-## Aufgabe 3
+## Task 3
 
 * Lesen Sie die Daten der Datei "MET Office Weather Data .csv" in die Matlab Variable data ein.
 * Bereiten Sie diese Variable so auf, dass Sie mit den Daten rain, sun, tmin, tmax rechnen können.
