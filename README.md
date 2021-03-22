@@ -1,15 +1,5 @@
 # Weather Station
 
-## Goals
-
-* Import CSV files
-* Table data type
-* Basic operations of the Table data type
-* Plot several data series in one plot
-* Know the basic arithmetic rules of set theory
-* Can transform terms with these calculation rules and simplify them under certain situations
-* Can apply these rules to the Matlab data type Table
-
 ## Tasks
 
 ### Task 1.1
