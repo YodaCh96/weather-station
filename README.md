@@ -68,7 +68,7 @@ We use the same data type (**`MET_Office_Weather_Data.csv`**). However, we only 
 
 We use the calculation rules to select the records that lie within the 25% quartiles in terms of **`tmin`**.
 
-![Quartile](images/quartile.PNG)
+![Quartile](images/quartile.jpg)
 
 1. Create subsets:
    1. construct the subset of the data of the year 2020 and hold this set in the variable data2020 (remove invalid values). 2.
