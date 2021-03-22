@@ -1,8 +1,4 @@
-%% Prüfung 1
-%% Aufgabe 3:
-% 1) Lesen Sie die Daten der Datei "*MET Office Weather Data .csv*" in die Matlab 
-% Variable _*data*_ ein.
-
+% Task 4.1
 opts = delimitedTextImportOptions("NumVariables", 8);
 
 % Specify range and delimiter
@@ -25,45 +21,27 @@ data = readtable("C:\Users\Ioannis\Desktop\Github_Repos\MATLAB\Wetterstation\MET
 
 % Clear temporary variables
 clear opts
-%% 
-% 2) Bereiten Sie diese Variable so auf, dass Sie mit den Daten _*rain*_, _*sun*_, 
-% _*tmin*_, _*tmax*_ rechnen können.
 
+% Task 4.2
 data = rmmissing(data);
-%% 
-% 3) Entfernen Sie die Spalte _*af*_ aus den Daten.
 
+% Task 4.3
 data = data(:,{'year', 'month', 'station', 'tmin','tmax','rain','sun'});
-%% 
-% 4) Bestimmen Sie die Wetterstation, welche die grösste Summe an Niederschlag 
-% pro Monat hat (über die gesamte Messzeit).
 
+% Task 4.4
 stationSummaryMonth = groupsummary(data, {'station','month'}, {'median', 'mean', 'sum' }, {'rain','sun','tmin','tmax'});
 [maxVal, idx] = max( stationSummaryMonth.sum_rain );
-%% 
-% 5) Bestimmen Sie die Datenmenge, welche nur die Jahresdaten dieser, in *Teilaufgabe 
-% 4.* bestimmten Wetterstation beinhalten.
 
+% Task 4.5
 stationSummaryYear = groupsummary(data, {'station','year'}, {'median', 'mean' ,'sum' }, {'rain','sun','tmin','tmax'});
 maxRainStation = stationSummaryMonth(idx,'station').station;
 
 maxRainStationYearData = stationSummaryYear(stationSummaryYear.station==maxRainStation,:);
-%% 
-% 6) Erstellen Sie ein kombiniertes Diagramm, mit _zwei Unterdiagrammen_, welche 
-% untereinander stehen. Alle Diagramme beziehen sich auf die Datenmenge aus *Aufgabe 
-% 5*.
-%% 
-% * Das erste Unterdiagramm soll den Temperaturverlauf von Messbeginn bis Messende 
-% für die daten median_tmin und median_tmax darstellen.  Das Diagramm soll einen 
-% Titel, Achsenbeschriftungen sowie eine Legende haben.
-% * Das zweite Unterdiagramm soll die Sonnenscheindauer (*mdian_sun*) und die 
-% mittlere Regenmenge (*median_rain*) über die gesamte Messperiode darstellen. 
-% Achtung: die Sonnenscheindauer und die Regenmenge haben unterschiedliche Einheiten 
-% und dürfen nicht auf derselben y-Achse dargestellt werden! Das Diagramm soll 
-% einen _*Titel*_, _*Achsenbeschriftungen*_ sowie eine _*Legende*_ haben.
 
+% Task 4.6
 tiledlayout(2,1);
 
+% Task 4.7
 l1 = nexttile;
 plot(l1, maxRainStationYearData.year,maxRainStationYearData.median_tmin);
 hold on;
@@ -74,6 +52,7 @@ xlabel(l1,"observation period (years)");
 ylabel(l1,"temperature (degree C)");
 legend(l1,"median tmin", "median tmax");
 
+% Task 4.8
 l2 = nexttile;
 yyaxis left;
 plot(l2, maxRainStationYearData.year, maxRainStationYearData.median_sun);
