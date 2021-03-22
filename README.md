@@ -10,7 +10,7 @@
 * Can transform terms with these calculation rules and simplify them under certain situations
 * Can apply these rules to the Matlab data type Table
 
-## Task
+## Tasks
 
 ### Task 1.1
 
@@ -88,16 +88,39 @@ We use the calculation rules to select the records that lie within the 25% quart
 3. Write down the set operations you performed as a formula. 4.
 4. What range does this quantity correspond to in a boxplot?
 
-## Task 3
+## Task 4
 
-* Read the data from the file "MET Office Weather Data .csv" in into the Matlab variable data.
-* Prepare this variable so that you can calculate with the data rain, sun, tmin, tmax.
-* Remove the column af from the data.
-* Determine the weather station that has the largest sum of precipitation per month (over the entire measurement period).
-* Determine the data set that only contains the annual data of the weather station determined.
-* Create a combined chart, with two sub-charts, one below the other. All diagrams refer to the data set.
-* The first sub-diagram should show the temperature curve from the beginning to the end of the measurement for the data median_tmin and median_tmax.  The diagram should have a title, axis labels and a legend.
-* The second subdiagram should show the sunshine duration (mdian_sun) and the mean rainfall (median_rain) over the entire measurement period. Attention: the sunshine duration and the rainfall have different units and must not be shown on the same y-axis! The diagram should have a title, axis labels and a legend.
+### Task 4.1
+
+Read the data from the file "MET Office Weather Data .csv" in into the Matlab variable data.
+
+### Task 4.2
+
+Prepare this variable so that you can calculate with the data rain, sun, tmin, tmax.
+
+### Task 4.3
+
+Remove the column af from the data.
+
+### Task 4.4
+
+Determine the weather station that has the largest sum of precipitation per month (over the entire measurement period).
+
+### Task 4.5
+
+Determine the data set that only contains the annual data of the weather station determined.
+
+### Task 4.6
+
+Create a combined chart, with two sub-charts, one below the other. All diagrams refer to the data set.
+
+### Task 4.7
+
+The first sub-diagram should show the temperature curve from the beginning to the end of the measurement for the data median_tmin and median_tmax.  The diagram should have a title, axis labels and a legend.
+
+### Task 4.8
+
+The second subdiagram should show the sunshine duration (mdian_sun) and the mean rainfall (median_rain) over the entire measurement period. Attention: the sunshine duration and the rainfall have different units and must not be shown on the same y-axis! The diagram should have a title, axis labels and a legend.
 
 ## Contributing
 
