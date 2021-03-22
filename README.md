@@ -74,30 +74,30 @@ Umformen von Termen:
 
 ### Task 2.2
 
-Wir verwenden für diese Übung denselben Datentype wie in Übung 1 (**`MET_Office_Weather_Data.csv`**). Wir betrachten aber nur die Daten des Jahres 2020.
+We use the same data type (**`MET_Office_Weather_Data.csv`**). However, we only consider the data for the year 2020.
 
-Wir verwenden die Rechenregeln, um diejnigen Datensätze zu selektieren, die bezülgich **`tmin`** innerhalb der 25% Quartile liegen.
+We use the calculation rules to select the records that lie within the 25% quartiles in terms of **`tmin`**.
 
 ![Quartile](../images/quartile.PNG)
 
-1. Erstellen von Teilmengen:
-   1. Konstruieren Sie die Teilmenge der Daten des Jahres 2020 und halten Sie diese Menge in der Variable data2020 fest (entfernen Sie ungültige Werte)
-   2. Bilden Sie die Teilmenge aboveMedian, welche alle Daten enthält, mit tmin > median(tmin). Bilden Sie die Teilmenge belowMedian, welche alle Daten enthält, mit tmin <= median(tmin)
-   3. Wiederholen Sie dieses Verfahren für diese zwei Teilmengen und definieren sie jeweils zwei neue Namen für diese Teilmengen
-2. Welche Wetterstationen haben ein tmin, welches zwischen unterem und oberem Quartil ist? – Das sind sollten 50% aller Datenätze sein. Prüfen Sie.
-3. Schreiben Sie die Mengenoperationen, die Sie ausgeführt haben als Formel auf.
-4. Welchem Bereich entspricht diese Menge in einem Boxplot?
+1. Create subsets:
+   1. construct the subset of the data of the year 2020 and hold this set in the variable data2020 (remove invalid values). 2.
+   2. Form the subset aboveMedian, which contains all data, with tmin > median(tmin). Form the subset belowMedian, which contains all the data, with tmin <= median(tmin). 3.
+   3. Repeat this procedure for these two subsets and define two new names for each of them.
+2. Which weather stations have a tmin that is between the lower and upper quartile? - This should be 50% of all data sets. Check.
+3. Write down the set operations you performed as a formula. 4.
+4. What range does this quantity correspond to in a boxplot?
 
 ## Task 3
 
-* Lesen Sie die Daten der Datei "MET Office Weather Data .csv" in die Matlab Variable data ein.
-* Bereiten Sie diese Variable so auf, dass Sie mit den Daten rain, sun, tmin, tmax rechnen können.
-* Entfernen Sie die Spalte af aus den Daten.
-* Bestimmen Sie die Wetterstation, welche die grösste Summe an Niederschlag pro Monat hat (über die gesamte Messzeit).
-* Bestimmen Sie die Datenmenge, welche nur die Jahresdaten dieser, in Teilaufgabe 4. bestimmten Wetterstation beinhalten. Wenn Sie nicht wissen, wie Sie 4. lösen, wählen Sie eine beliebige Messstation.
-* Erstellen Sie ein kombiniertes Diagramm, mit zwei Unterdiagrammen, welche untereinander stehen. Alle Diagramme beziehen sich auf die Datenmenge aus Aufgabe 5. Die Punkte für diese Aufgabe erhalte SIe, wenn 7. und  8. als Unterdiagramme gemacht werden.
-* Das erste Unterdiagramm soll den Temperaturverlauf von Messbeginn bis Messende für die daten median_tmin und median_tmax darstellen.  Das Diagramm soll einen Titel, Achsenbeschriftungen sowie eine Legende haben.
-* Das zweite Unterdiagramm soll die Sonnenscheindauer (mdian_sun) und die mittlere Regenmenge (median_rain) über die gesamte Messperiode darstellen. Achtung: die Sonnenscheindauer und die Regenmenge haben unterschiedliche Einheiten und dürfen nicht auf derselben y-Achse dargestellt werden! Das Diagramm soll einen Titel, Achsenbeschriftungen sowie eine Legende haben.
+* Read the data from the file "MET Office Weather Data .csv" in into the Matlab variable data.
+* Prepare this variable so that you can calculate with the data rain, sun, tmin, tmax.
+* Remove the column af from the data.
+* Determine the weather station that has the largest sum of precipitation per month (over the entire measurement period).
+* Determine the data set that only contains the annual data of the weather station determined.
+* Create a combined chart, with two sub-charts, one below the other. All diagrams refer to the data set.
+* The first sub-diagram should show the temperature curve from the beginning to the end of the measurement for the data median_tmin and median_tmax.  The diagram should have a title, axis labels and a legend.
+* The second subdiagram should show the sunshine duration (mdian_sun) and the mean rainfall (median_rain) over the entire measurement period. Attention: the sunshine duration and the rainfall have different units and must not be shown on the same y-axis! The diagram should have a title, axis labels and a legend.
 
 ## Contributing
 
